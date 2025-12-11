@@ -3,7 +3,7 @@ function funcao(num, valMax){
 
     var inc = 1, soma = 0
     
-    while(num * inc <= valMax){
+    while(num * inc < valMax){
         soma += num * inc
         inc ++
     }
@@ -15,6 +15,9 @@ function funcao(num, valMax){
 function funcao2(valorInic, valMax){
 
     var qntdeTermos = Math.trunc(valMax / valorInic)
+    if(valMax % valorInic == 0)
+        qntdeTermos -= 1
+    
     return (valorInic * (qntdeTermos + 1)) * qntdeTermos / 2
 
 }
